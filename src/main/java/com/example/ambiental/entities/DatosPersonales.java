@@ -13,13 +13,13 @@ public class DatosPersonales implements Serializable {
     private Integer id;
 
     @Column(name = "tipo_persona")
-    private Enum tipoPersona;
+    private String tipoPersona;
 
     @Column(name = "nombre")
     private String nombre;
 
     @Column(name = "tipo_identificacion")
-    private Enum tipoIdentificacion;
+    private String tipoIdentificacion;
 
     @Column(name = "numero_Identificacion")
     private Integer numeroIdentificacion;
@@ -39,7 +39,7 @@ public class DatosPersonales implements Serializable {
     public DatosPersonales() {
     }
 
-    public DatosPersonales(Integer id, Enum tipoPersona, String nombre, Enum tipoIdentificacion, Integer numeroIdentificacion, String direccion, String municipio, String departamento, Integer telefono) {
+    public DatosPersonales(Integer id, String tipoPersona, String nombre, String tipoIdentificacion, Integer numeroIdentificacion, String direccion, String municipio, String departamento, Integer telefono) {
         this.id = id;
         this.tipoPersona = tipoPersona;
         this.nombre = nombre;
@@ -59,11 +59,11 @@ public class DatosPersonales implements Serializable {
         this.id = id;
     }
 
-    public Enum getTipoPersona() {
+    public String getTipoPersona() {
         return tipoPersona;
     }
 
-    public void setTipoPersona(Enum tipoPersona) {
+    public void setTipoPersona(String tipoPersona) {
         this.tipoPersona = tipoPersona;
     }
 
@@ -75,11 +75,11 @@ public class DatosPersonales implements Serializable {
         this.nombre = nombre;
     }
 
-    public Enum getTipoIdentificacion() {
+    public String getTipoIdentificacion() {
         return tipoIdentificacion;
     }
 
-    public void setTipoIdentificacion(Enum tipoIdentificacion) {
+    public void setTipoIdentificacion(String tipoIdentificacion) {
         this.tipoIdentificacion = tipoIdentificacion;
     }
 

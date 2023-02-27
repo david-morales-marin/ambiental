@@ -23,15 +23,15 @@ public class Solicitud implements Serializable  {
     private String ubicacion;
 
     @Column(name = "categorias")
-    private Enum categoria;
+    private String categoria;
 
     @Column(name = "vencimiento")
-    private Enum vencimiento;
+    private String vencimiento;
 
     public Solicitud() {
     }
 
-    public Solicitud(Integer id, Integer tipoDocumento, String nombreSolicitante, String ubicacion, Enum categoria, Enum vencimiento) {
+    public Solicitud(Integer id, Integer tipoDocumento, String nombreSolicitante, String ubicacion, String categoria, String vencimiento) {
         this.id = id;
         this.tipoDocumento = tipoDocumento;
         this.nombreSolicitante = nombreSolicitante;
@@ -72,19 +72,19 @@ public class Solicitud implements Serializable  {
         this.ubicacion = ubicacion;
     }
 
-    public Enum getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Enum categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public Enum getVencimiento() {
+    public String getVencimiento() {
         return vencimiento;
     }
 
-    public void setVencimiento(Enum vencimiento) {
+    public void setVencimiento(String vencimiento) {
         this.vencimiento = vencimiento;
     }
 }

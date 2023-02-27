@@ -13,14 +13,14 @@ public class Login implements Serializable {
     private Integer id;
 
     @Column(name = "tipo_Documento")
-    private Enum tipoDocumento;
+    private String tipoDocumento;
 
     @Column(name = "documento")
     private Integer documento;
 
     public Login() {}
 
-    public Login(Integer id, Enum tipoDocumento, Integer documento) {
+    public Login(Integer id, String tipoDocumento, Integer documento) {
         this.id = id;
         this.tipoDocumento = tipoDocumento;
         this.documento = documento;
@@ -34,11 +34,11 @@ public class Login implements Serializable {
         this.id = id;
     }
 
-    public Enum getTipoDocumento() {
+    public String getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(Enum tipoDocumento) {
+    public void setTipoDocumento(String tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
